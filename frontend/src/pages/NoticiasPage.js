@@ -1,5 +1,6 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
+import '../styles/components/pages/NoticiasPage.css';
 
 const NoticiasPage = (props) => {
     return (
@@ -12,7 +13,7 @@ const NoticiasPage = (props) => {
                         <h4>Debut de titular con gol para la araña</h4>
                         <p>
                             En su primera titularidad con la selección mayor, Álvarez convirtió el unico gol del seleccionado
-                            nacional en el empate 1-1 ante Ecuador en Guayaquil.
+                            nacional en  el empate 1-1 ante Ecuador en Guayaquil.
                         </p>
                         <Button href="#" variant="outline-danger">Leer mas...</Button>{' '}
                     </div>

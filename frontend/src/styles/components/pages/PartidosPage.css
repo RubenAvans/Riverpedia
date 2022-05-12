@@ -1,0 +1,19 @@
+main div table tbody tr img{
+    width: 30px;
+    height: 30px;
+}
+.partidos{
+    width: 70%;
+    float: right;
+    padding-left: 15px;
+}
+.posiciones{
+    width: 30%;
+    float: left;
+}
+
+.ultimopartido{
+padding-left: 15px;
+width: 70%;
+float: right
+}

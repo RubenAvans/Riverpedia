@@ -1,0 +1,152 @@
+.acordition-body{
+    overflow: hidden;
+    /* display: inline-flex;
+    justify-content: space-around; */
+}
+
+.jugadores{
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+.jugador2022, .jugador2021, .jugador2019, .jugador2018{
+    border: 1.5px solid #e30520;
+    border-radius: 4px;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    width: 20%;
+    overflow: hidden;
+    margin: 0% 1% 0% 1%;
+}
+
+.jugador2022 img{
+    max-width: 110%;
+    margin-top: 10px;
+}
+
+.jugador2022 h5, .jugador2021 h5, .jugador2019 h5, .jugador2018 h5{
+    font-size: 20px;
+    color: #e30520;
+}
+
+.jugador h6, .jugador2021 h6, .jugador2019 h6, .jugador2018 h6{
+    font-size: 16px;
+}
+
+.jugador2022 p, .jugador2021 p, .jugador2019 p, .jugador2018 p{
+    font-size: 14px;
+    margin: 0px 2px 0px 2px;
+}
+
+.jugador2022:nth-child(1) h6{
+    color: rgb(71, 71, 71);
+}
+
+.jugador2022:nth-child(2) h6{
+    color: blue;
+}
+
+.jugador2022:nth-child(3) h6{
+    color: green;
+}
+
+.jugador2022:nth-child(4) h6{
+    color: blue;
+}
+
+.jugador2022:nth-child(5) h6{
+    color: green;
+}
+
+.jugador2022:nth-child(6) h6{
+    color: rgb(71, 71, 71);
+}
+
+.jugador2022:nth-child(7) h6{
+    color: blue;
+}
+
+.jugador2021 img{
+    max-width: 125%;
+    position: relative;
+    right: 10px;
+}
+
+.jugador2021:nth-child(1) h6{
+    color: rgb(71, 71, 71);
+}
+
+.jugador2021:nth-child(2) h6{
+    color: green;
+}
+
+.jugador2021:nth-child(3) h6{
+    color: blue;
+}
+
+.jugador2021:nth-child(4) h6{
+    color: green;
+}
+
+.jugador2021:nth-child(5) h6{
+    color: green;
+}
+
+.jugador2021:nth-child(6) h6{
+    color: green;
+}
+
+.jugador2021:nth-child(7) h6{
+    color: green;
+}
+
+.jugador2021:nth-child(8) h6{
+    color: rgb(71, 71, 71);
+}
+
+.jugador2019 img{
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+.jugador2019:nth-child(1) h6{
+    color: green;
+}
+
+.jugador2019:nth-child(2) h6{
+    color: green;
+}
+
+.jugador2019:nth-child(3) h6{
+    color: green;
+}
+
+.jugador2019:nth-child(4) h6{
+    color: blue;
+}
+
+.jugador2019:nth-child(5) h6{
+    color: blue;
+}
+
+.jugador2018 img{
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+.jugador2018:nth-child(1) h6{
+    color: green;
+}
+
+.jugador2018:nth-child(2) h6{
+    color: green;
+}
+
+.jugador2018:nth-child(3) h6{
+    color: blue;
+}
+
+.jugador2018:nth-child(4) h6{
+    color: green;
+}

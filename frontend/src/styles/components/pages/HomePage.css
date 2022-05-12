@@ -23,21 +23,16 @@
     border-radius: 5px;
 }
 
-/* nav ul li a.activo{
-    background-color: rgba(0, 0, 0, 0.3);
-} */
-
 .noticia{
     display: flex;
     flex-direction: column;
 }
-.fotonoticia{
-    width: 300px;
-    height: 300px;
-}
+
 
 .fotonoticia img{
     border-radius: 5px;
+    width: 300px;
+    height: 300px;
 }
 
 .titulo{

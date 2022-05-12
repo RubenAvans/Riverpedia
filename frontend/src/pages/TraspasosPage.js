@@ -1,5 +1,6 @@
 import React from "react";
-import Accordion from 'react-bootstrap/Accordion'
+import Accordion from 'react-bootstrap/Accordion';
+import '../styles/components/pages/TraspasosPage.css';
 
 const TraspasosPage = (props) => {
     return (
