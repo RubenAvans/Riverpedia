@@ -1,1 +1,38 @@
-<h2>Proximamente el LOGIN...</h2>
+<div class="container">
+    <div class="login">
+        <form action="/admin/login" method="post">
+            <div class="mb-3">
+                <label for="inputUser" class="form-label">Usuario</label>
+                <input type="text" class="form-control" id="inputUser" name="usuario">
+            </div>
+            {{#if error}}
+            <div class="mb-3">
+                <label for="inputPassword" class="form-label">Contraseña</label>
+                <input type="password" class="form-control is-invalid" id="inputPassword" placeholder="Usuario o contraseña incorrecto" name="password">
+            </div>
+            {{else}}
+            <div class="mb-3">
+                <label for="inputPassword" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="inputPassword" name="password">
+            </div>
+            {{/if}}
+            <button type="submit" class="btn btn-danger">Iniciar sesión</button>
+        </form>
+    </div>
+</div>
+
+
+{{!-- <form action="/admin/login" method="post">
+            <div class="mb-3">
+                <label for="inputUser" class="form-label">Usuario</label>
+                <input type="text" class="form-control" id="inputUser" name="usuario">
+            </div>
+            <div class="mb-3">
+                <label for="inputPassword" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="inputPassword" name="password">
+            </div>
+            <button type="submit" class="btn btn-danger">Iniciar sesión</button>
+        </form> --}}
+
+        {{!-- <input type="password" class="form-control is-invalid" id="inputPassword" name="password">
+        <label for="floatingInputInvalid">Invalid input</label> --}}
