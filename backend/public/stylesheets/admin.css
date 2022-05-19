@@ -6,6 +6,19 @@
     margin-top: 50px;
 }
 
-a {
+p a {
     margin-left: 20px;
+}
+
+h3 {
+    margin-bottom: 20px;
+}
+
+.container{
+    margin-top: 40px;
+    width: 70%;
+}
+
+form button{
+    float: right;
 }
