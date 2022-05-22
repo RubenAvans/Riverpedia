@@ -1,10 +1,45 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Button from 'react-bootstrap/Button';
 import '../styles/components/pages/NoticiasPage.css';
+import axios from 'axios';
+import NoticiaItem from "../components/noticias/NoticiaItem";
 
 const NoticiasPage = (props) => {
+    const [loading, setLoading] = useState(false);
+    const [noticias, setNoticias] = useState([]);
+
+    useEffect(() => {
+        const cargarNoticias = async () => {
+            setLoading(true);
+            const response = await axios.get('http://localhost:3000/api/noticias');
+            setNoticias(response.data);
+            setLoading(false);
+        };
+
+        cargarNoticias();
+    }, []);
+
     return (
-        <div className="container">
+        <section className="holder">
+            <h2>Noticias</h2>
+            {loading ? (
+                <p>Cargando...</p>
+            ) : (
+                noticias.map(item => <NoticiaItem key={item.id}
+                    title={item.titulo} subtitle={item.subtitulo}
+                    imagen={item.imagen} body={item.cuerpo} />)
+            )}
+        </section>
+    );
+}
+
+export default NoticiasPage;
+
+
+
+
+
+{/* <div className="container">
             <main className="holder">
                 <h2>Noticias</h2>
                 <div className="noticias">
@@ -44,8 +79,4 @@ const NoticiasPage = (props) => {
                 </div>
 
             </main>
-        </div>
-    );
-}
-
-export default NoticiasPage;
+        </div> */}

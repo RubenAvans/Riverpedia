@@ -3,6 +3,8 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const fileUpload = require('express-fileupload');
+const cors = require('cors');
 
 require('dotenv').config();
 const session = require('express-session');
@@ -11,6 +13,7 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const loginRouter = require('./routes/admin/login');
 const adminRouter = require ('./routes/admin/noticias');
+const apiRouter = require('./routes/api');
 
 const app = express();
 
@@ -46,10 +49,16 @@ secured = async (req, res, next) => {
   } // cierro catch
 } // cierro secured, comando para ponerle el login a la pagina y no poder acceder a otras secciones sin iniciar sesión
 
+app.use(fileUpload({
+  useTempFiles: true,
+  tempFileDir: '/tmp'
+}));
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
 app.use('/admin/noticias', secured, adminRouter);
+app.use('/api', cors(), apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
