@@ -11,6 +11,7 @@ import NoticiasPage from './pages/NoticiasPage';
 import PartidosPage from './pages/PartidosPage';
 import TraspasosPage from './pages/TraspasosPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ContactoPage from './pages/ContactoPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/noticias" exact component={NoticiasPage} />
           <Route path="/partidos" exact component={PartidosPage} />
           <Route path="/traspasos" exact component={TraspasosPage} />
+          <Route path="/contacto" exact component={ContactoPage} />
         </Switch>
         <Footer />
       </Router>
