@@ -40,10 +40,52 @@ router.post('/agregar', async (req, res, next) => {
     res.render('admin/agregar', {
       layout: 'admin/layout',
       error: true,
-      message: 'No se cargó la novedad'
+      message: 'No se cargó la noticia'
     }); // cierro render
   } // cierro catch
 }); // cierro post
+
+// para eliminar
+router.get('/eliminar/:id', async(req, res, next)=>{
+  var id = req.params.id;
+  await noticiasModel.deleteNoticiasById(id);
+  res.redirect('/admin/noticias');
+}); // cierro get de eliminar
+
+//para editar (tomar noticia)
+router.get('/editar/:id', async (req, res, next)=>{
+  var id = req.params.id;
+  console.log(req.params.id);
+  var noticia = await noticiasModel.getNoticiaById(id);
+
+  res.render('admin/editar',{
+    layout: 'admin/layout',
+    noticia
+  }); // cierro render
+}); // cierro get para editar
+
+//para editar (actualizar noticia)
+router.post('/editar', async (req, res, next)=>{
+  try {
+    var obj = {
+      titulo: req.body.titulo,
+      subtitulo: req.body.subtitulo,
+      cuerpo: req.body.cuerpo
+    }
+    console.log(obj)
+
+    await noticiasModel.editarNoticiaById(obj, req.body.id);
+    res.redirect('/admin/noticias');
+  } // cierro try
+  catch (error) {
+    console.log(error);
+    res.render('admin/editar', {
+      layout: 'admin/layout',
+      error: true,
+      message: 'No se modificó la noticia'
+    }); // cierro render
+  }; // cierro catch
+}); // cierro try
 
 
 module.exports = router;

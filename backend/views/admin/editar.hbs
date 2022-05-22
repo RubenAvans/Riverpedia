@@ -1,0 +1,23 @@
+<div class="container">
+    <h4>Editar noticia:</h4>
+    <div class="row">
+        <form action="/admin/noticias/editar" method="post">
+            <div class="mb-3">
+                <input type="hidden" class="form-control" value="{{noticia.id}}" name="id">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" value="{{noticia.titulo}}" name="titulo">
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" value="{{noticia.subtitulo}}" name="subtitulo">
+            </div>text
+            <div class="mb-3">
+                <textarea type="text" class="form-control" id="cuerpo" name="cuerpo" rows="4">{{noticia.cuerpo}}</textarea>
+            </div>
+            <button type="submit" class="btn btn-danger">Guardar</button>
+        </form>
+        {{#if error}}
+            <p>{{message}}</p>
+        {{/if}}
+    </div>
+</div>
