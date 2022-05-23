@@ -18,7 +18,6 @@
 .noticias h2{
     color: #e61919;
     font-size: 20px;
-    /* font-style: italic; */
      font-weight: bold;
     border-bottom: 1px solid #cc0000;
     margin-bottom: 16px;
@@ -35,37 +34,3 @@
 .button {
     margin-top: 25px;
 }
-
-/* .noticias:nth-child(even) .info{
-    float: left;
-    padding-right: 20px;
-}
-
-.noticias:nth-child(2) .info button{
-    position: relative;
-    top: 75px;
-    left: 10px;
-}
-
-.noticias:nth-child(odd) img{
-    float: left; */
-    /* margin-right: 10px; */
-/* }
-
-.noticias:nth-child(odd) .info{
-    float: right;
-    padding-left: 20px; */
-    /* margin-left: 10px; */
-/* }
-
-.noticias:nth-child(odd) .info button{
-    position: relative;
-    top: 30px;
-    left: 83%;
-} */
-
-/* .noticias:last-child .info button{
-    position: relative;
-    top: 30px;
-    left: 10px;
-} */
